@@ -1,0 +1,31 @@
+name: Bug report
+description: Something in LedgerKing (or another IQKings app) does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for telling us. **Do not post** your license file, passwords, GSTIN of customers or other private
+        data here. For a security problem, follow ledgerking/SECURITY.md instead of opening an issue.
+  - type: dropdown
+    id: product
+    attributes: { label: Product, options: [LedgerKing, BillingKing, iqkings.com website] }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Version, description: "License screen (Alt+U) or Help shows it, e.g. 1.0.0", placeholder: "1.0.0" }
+    validations: { required: true }
+  - type: input
+    id: windows
+    attributes: { label: Windows version, placeholder: "Windows 11 23H2" }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to see the problem, placeholder: "1. Press F8\n2. Choose party ...\n3. Save" }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: What you expected and what happened }
+    validations: { required: true }
+  - type: textarea
+    id: screenshot
+    attributes: { label: Screenshot or error reference (ERR-…), description: Hide private names and amounts if needed. }
