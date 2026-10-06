@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Customer support (account, license, payment)
+    url: https://www.iqkings.com/account/support
+    about: Questions about your license, payment or downloads go to support in your account.
+  - name: Guides
+    url: https://www.iqkings.com/guides
+    about: Step-by-step help for GST returns, e-way bill and moving from Tally.

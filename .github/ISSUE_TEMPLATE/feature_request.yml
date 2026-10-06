@@ -1,0 +1,18 @@
+name: Feature request
+description: Ask for a new feature or a change.
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: product
+    attributes: { label: Product, options: [LedgerKing, BillingKing, iqkings.com website] }
+    validations: { required: true }
+  - type: textarea
+    id: need
+    attributes: { label: What do you need to do?, description: "Describe the work, e.g. 'send all pending bills of a party on WhatsApp at month end'." }
+    validations: { required: true }
+  - type: textarea
+    id: today
+    attributes: { label: How do you do it today? }
+  - type: input
+    id: business
+    attributes: { label: Type of business (optional), placeholder: "Kirana shop, distributor, CA office ..." }
