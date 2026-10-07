@@ -89,7 +89,8 @@ Details in [GST.md](GST.md).
 
 - **Tally**: masters and Day Book XML (including item vouchers, stock journals, manufacturing journals, delivery
   notes). A summary per kind, a problem list (CSV) and "import the good entries".
-- **Excel / CSV**: ledgers with opening balances, stock items, old vouchers with column matching.
+- **Excel / CSV**: ledgers with opening balances, stock items, old vouchers with column matching; 🆕 up to
+  **1,00,000 rows per file**.
 - **Busy / Marg** export column names are recognised.
 - Every import shows a preview first and is all-or-nothing.
 

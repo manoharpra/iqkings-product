@@ -15,7 +15,16 @@ installed copies update themselves (signed updates).
 - **Fixed asset register** with depreciation (Income-tax WDV or straight line), yearly posting, sale or scrap.
 - **Manufacturing**: bill of material, production with shortage check, wastage and true production cost.
 
+**Big books, still fast**
+- **Excel / CSV import up to 1,00,000 rows per file** (was 5,000): a whole year of vouchers in one file. The
+  preview shows the first 1,000 rows and every row with a problem; counts always cover the whole file.
+- **Bills stay fast as the books grow**: the stock check on a bill now reads only the items on that bill. Tested
+  with a big company (big imports, thousands of GST bills, backup and restore) before release.
+- Long jobs (a big import or backup) run in the background, so Windows never shows "Not responding".
+
 **Plans**
+- A paid license shows **👑 LedgerKing Pro** in the header; "Upgrade" is shown only during the trial and on the
+  Free plan.
 - The Free plan is for small shops: 1 company and **20 sales bills a month**, offline, data never locked.
 - Lifetime licenses: official GST rate updates come with an active Update & Support; a small note on GST pages
   says when it has ended.

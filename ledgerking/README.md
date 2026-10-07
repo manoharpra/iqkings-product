@@ -41,13 +41,14 @@
 | **GST** | GSTR-1 / 3B (screen, CSV, portal JSON), GSTR-2B match, ITC register, RCM, composition, exports / SEZ, e-invoice, e-way bill |
 | **Money** | Payment reminders (WhatsApp / e-mail), bank reconciliation, cheque printing, TDS / TCS with 26Q / 27EQ worksheet |
 | **Grow** 🆕 | Party-wise price lists, fixed asset register with Income-tax depreciation, manufacturing with bill of material |
-| **Move in** | Import from Tally (XML), Excel / CSV, Busy and Marg, with a preview before anything is saved |
+| **Move in** | Import from Tally (XML), Excel / CSV (🆕 up to 1,00,000 rows a file), Busy and Marg, with a preview before anything is saved |
 
 🆕 = coming in the next version. Full list with shortcuts: **[FEATURES.md](FEATURES.md)**.
 
 ## Why LedgerKing
 
 - **Fast**: keyboard first, every screen has a shortcut, **Ctrl+K** finds any party, item, bill or amount.
+- **Big books, still fast** 🆕: bills stay quick as your books grow; a year of vouchers imports from one file.
 - **Your language**: English, हिंदी, and 🆕 मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు, with fonts built in.
 - **Simple when you want** 🆕: Simple Mode shows only the everyday screens for first-time users.
 - **Books always balance**: every rule is checked in the app and again inside the database ([ACCOUNTING.md](ACCOUNTING.md)).

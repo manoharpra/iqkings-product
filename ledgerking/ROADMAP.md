@@ -10,6 +10,7 @@ on [www.iqkings.com](https://www.iqkings.com).
 |---|---|
 | **Tax on advances received** | Advance receipts for goods / services before the invoice. |
 | **Amendments of earlier returns** | GSTR-1 amendment tables for corrections of earlier months. |
+| **Bill from a photo** | Scan a supplier's bill (photo or PDF): the e-invoice QR and the printed text fill the purchase bill for you to check. Works offline. |
 | **Direct e-invoice / e-way bill upload through a GSP** | One click instead of JSON upload; needs a GSP account and API keys. |
 
 ## Later
