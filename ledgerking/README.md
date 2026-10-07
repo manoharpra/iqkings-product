@@ -87,6 +87,15 @@ OneDrive / Dropbox folder; backups can go anywhere).
 | ![Bill with profit](screenshots/ui_bill_profit.png) | ![Day Book in Hindi](screenshots/ui_neon_hi_zoom125_AltD.png) |
 | Bill with discount and estimated profit | Day Book in हिंदी |
 
+**Coming in the next version** 🆕
+
+| | |
+|---|---|
+| ![Price lists](screenshots/ui_price_lists.png) | ![Fixed assets](screenshots/ui_fixed_assets.png) |
+| Price lists: Wholesale rates filled from the sale price | Fixed asset register with year-wise depreciation plan |
+| ![Manufacturing](screenshots/ui_manufacturing.png) | ![LedgerKing in Tamil](screenshots/ui_lang_ta_home.png) |
+| Manufacturing: stock check and cost before production | LedgerKing in தமிழ் (also मराठी, ગુજરાતી, বাংলা, తెలుగు) |
+
 More: [screenshots/](screenshots/README.md).
 
 ## Help

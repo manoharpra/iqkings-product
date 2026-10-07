@@ -30,7 +30,8 @@ Change the registration in **Company Details**. The GSTIN and state of the compa
 - **Exempt, Nil-rated and Non-GST** items are kept apart (GSTR-1 table 8).
 - **RCM** (reverse charge) purchases: tax payable and ITC are recorded separately.
 - **Dated rate slabs**: an item keeps its rate history, so a bill always uses the rate valid on its date. Official
-  rate changes arrive as owner-signed rate updates.
+  rate changes arrive as rate updates signed by IQKings (included in Update & Support); your Admin can also enter a
+  dated rate change at once, with a reason.
 - Each posted bill stores the HSN, unit and tax of each line as on the bill date, so later changes to the item never
   change a filed return.
 - **Exports and SEZ**: with or without IGST (LUT / bond), port code and shipping bill; SEZ always IGST; deemed exports;

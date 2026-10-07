@@ -1,6 +1,6 @@
 # LedgerKing screenshots
 
-Pictures from LedgerKing 1.0.0. Click a picture to open it full size.
+Pictures from LedgerKing 1.0.0, and from the next version where marked 🆕. Click a picture to open it full size.
 
 ## Screens
 
@@ -87,6 +87,40 @@ Pictures from LedgerKing 1.0.0. Click a picture to open it full size.
 ### Sales / Purchase list
 
 ![Sales / Purchase list](ui_voucher_list.png)
+
+## Coming in the next version 🆕
+
+### Price lists
+
+![Price lists](ui_price_lists.png)
+
+### Fixed asset register and depreciation plan
+
+![Fixed asset register and depreciation plan](ui_fixed_assets.png)
+
+### Manufacturing: stock check and production cost
+
+![Manufacturing: stock check and production cost](ui_manufacturing.png)
+
+### Home screen in मराठी
+
+![Home screen in Marathi](ui_lang_mr_home.png)
+
+### Home screen in ગુજરાતી
+
+![Home screen in Gujarati](ui_lang_gu_home.png)
+
+### Home screen in বাংলা
+
+![Home screen in Bengali](ui_lang_bn_home.png)
+
+### Home screen in தமிழ்
+
+![Home screen in Tamil](ui_lang_ta_home.png)
+
+### Home screen in తెలుగు
+
+![Home screen in Telugu](ui_lang_te_home.png)
 
 ## Printing
 

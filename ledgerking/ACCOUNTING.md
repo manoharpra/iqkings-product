@@ -7,12 +7,11 @@ Every rule is built into the app **and** checked again inside the database, so a
 silently change your books. Each rule has an automated test.
 
 ## 1. Money
-- All amounts are **integer paise** (`i64`). Floats are never used.
-- One entered amount: max ±9,99,99,99,99,99,999.99 (`MAX_ENTRY_PAISE`), enforced by the app and by DB `CHECK`s.
-- All arithmetic is checked; overflow is an error, never a wrap (`overflow-checks = true` in release too).
-- Amount input is strict: `1250`, `1250.5`, `1250.50`, `-12.30`. Rejected: `1,250`, `.5`, `12.`, `1.234`, `+5`, `1e3`.
-- Rounding only through `domain_money` with an explicit mode. Tax rates are in basis points (18% = 1800).
-- Sign convention inside the core: **Debit positive, Credit negative**.
+- All amounts are kept in **whole paise**, never as rough decimal numbers, so totals are exact to the paisa.
+- One entered amount can be up to ±9,99,99,99,99,99,999.99; the app and the database both check it.
+- Every sum is checked: a total too large is an error, never a wrong number.
+- Amount input is strict: `1250`, `1250.5`, `1250.50`, `-12.30`. Refused: `1,250`, `.5`, `12.`, `1.234`, `+5`, `1e3`.
+- Rounding always follows a stated rule (see GST below).
 
 ## 2. Company and financial year (FY)
 - Books beginning date is fixed after creation (all openings derive from it).
@@ -23,7 +22,7 @@ silently change your books. Each rule has an automated test.
 - A closed year blocks: new vouchers, edits, posting, cancellation, opening-balance changes.
 
 ## 3. Groups and ledgers
-- 28 built-in groups (Tally-style) identified by `system_code`; renaming is allowed, deleting/moving is not.
+- 28 built-in groups (Tally-style); renaming is allowed, deleting/moving is not.
 - A sub-group always has its parent's nature (Asset/Liability/Income/Expense) and gross-profit flag. Nature never changes.
 - Only Asset/Liability ledgers may have an opening balance. Income/Expense ledgers start every FY at zero.
 - Built-in ledgers: **Cash** and **Profit & Loss A/c**.
@@ -41,13 +40,13 @@ DRAFT --post--> POSTED --cancel--> CANCELLED  (number kept, no effect)
   \--delete--> removed (drafts have no number and no effect)
 ```
 - Only drafts can be edited or deleted. Posted/cancelled/reversed vouchers and their lines can **never** be changed or deleted
-  (DB triggers reject even raw SQL).
+  (the database itself refuses, even if someone edits the data file directly).
 - Balances include `POSTED` + `REVERSED`; exclude `DRAFT` + `CANCELLED`.
 - **Cancel**: only if the voucher date is in an open year and unlocked period. Reason required.
 - **Reverse**: a new Journal voucher with every Dr/Cr swapped is posted on a reversal date ≥ original date. Only the
   reversal date must be open — this is the controlled way to correct a locked month or closed year. Reason required.
 - A reversal voucher can itself never be edited, cancelled or reversed.
-- Every change uses an optimistic `version` check (a stale screen cannot overwrite a newer change).
+- Every change checks the version: an old screen cannot overwrite a newer change made elsewhere.
 
 ## 5. Posting (double entry)
 Posting re-validates everything from the stored draft, inside one transaction:
@@ -90,21 +89,21 @@ Posting re-validates everything from the stored draft, inside one transaction:
 - Errors carry a code, a clear reason and a next action; unexpected failures also get a reference ID (`ERR-…`).
 
 ## 11. Storage rules
-- SQLite with `foreign_keys=ON` (verified), WAL journal, `synchronous=FULL`, `trusted_schema=OFF`, busy timeout.
-- Every write = one `BEGIN IMMEDIATE` transaction (all-or-nothing).
-- Versioned migrations with checksums; a database from a newer app version is refused; failed migrations roll back fully.
+- Every change is saved all-or-nothing: a power cut never leaves half an entry.
+- Structure upgrades are checked step by step; a data file from a newer app version is refused, and a failed
+  upgrade rolls back fully (a verified backup is taken first).
 - **The data file must be on a local disk. Keeping it on a network share is not supported.**
 
-## 12. Inventory (owner decisions, 2026-09-30)
-- Quantity = integer milli-units (max 3 decimals); each unit fixes its allowed decimals (Nos 0, Kg 3, Mtr 2 ...).
+## 12. Inventory
+- Quantities have up to 3 decimals; each unit fixes its allowed decimals (Nos 0, Kg 3, Mtr 2 ...).
 - Quantity on hand and value are **always derived** from stock movements of POSTED/REVERSED vouchers.
 - **Costing: FIFO.** Opening stock (books beginning) is the first layer. Order: date, then inward before outward on
   the same date, then entry order. Partly used layers keep `value - consumed`, so value is conserved to the paisa.
 - Purchase inward is valued at the **taxable value** (GST input credit is not cost). Sales returns (Credit Note) come
   back at the item's last known cost rate.
-- **Negative stock: ALLOWED + warning.** Posting succeeds, but returns a warning for every item that is negative at
-  day-end on the voucher date or any later date (back-dated sales included). Stock Summary and Item Register flag
-  negative rows (`is_negative`) and count them (`negative_count`) so the UI shows them in **red**.
+- **Negative stock: blocked, or allowed with a warning** (a company setting). When allowed, the bill is saved with a
+  warning for every item that goes negative on that date or any later date (back-dated sales included), and Stock
+  Summary and Item Register show those rows in **red**.
   A negative position is valued at the last known cost; the next purchase fills it first.
 - Trading account: opening stock (value at period start) and closing stock (value at period end). Balance Sheet shows
   closing stock under assets. Trial Balance shows an "Opening Stock" line (value at FY start).
@@ -112,7 +111,7 @@ Posting re-validates everything from the stored draft, inside one transaction:
 - Opening stock is locked like opening balances (after a year close or a lock over books beginning).
 - An item's unit cannot change once it has opening stock or movements; a used item cannot be deleted (mark inactive).
 
-## 13. GST (owner decisions, 2026-09-30)
+## 13. GST
 - Both **tax-exclusive** and **tax-inclusive** prices are supported.
 - **Discount first**: Taxable Value = Price - Discount (percent or amount; never more than the line amount).
 - **Rounding: 2 decimals, half-up**, per line and per tax component.
@@ -121,7 +120,7 @@ Posting re-validates everything from the stored draft, inside one transaction:
 - Inclusive prices: tax is extracted (`amount x rate / (100% + rate)`, halves for intra-state); taxable = amount - tax,
   so the line total equals the printed price exactly.
 - **Invoice round-off to rupee: optional**, half-up, posted separately to the built-in **Round Off** ledger and stored
-  on the invoice (`round_off_paise`).
+  on the invoice.
 - Place of supply = the party ledger's state unless chosen on the invoice. A taxed invoice without company state or
   place of supply is refused (never guessed).
 - Built-in ledgers: Output CGST/SGST/IGST (sales side), Input CGST/SGST/IGST (purchase side), Round Off.
@@ -141,7 +140,8 @@ Posting re-validates everything from the stored draft, inside one transaction:
 - No effect on ledgers or stock (so period locks do not apply); date must be in an OPEN financial year.
 - Numbers QT/0001, SO/0001 per year, assigned on creation, gap-free; cancelled numbers stay used.
 - OPEN documents may be edited (same financial year, audited, version-checked). CONVERTED / CANCELLED are final.
-- Quotation -> Sales Order, or Quotation / Sales Order -> Sales Invoice: whole document (partial delivery later).
+- Quotation -> Sales Order, or Quotation / Sales Order -> Sales Invoice. A sales order can be delivered in parts: it
+  stays open until nothing is pending.
   An expired quotation cannot be converted until "valid until" is extended.
 - GST computed with the same code as invoices.
 

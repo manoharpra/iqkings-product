@@ -1,44 +1,38 @@
-# How LedgerKing is built
+# How LedgerKing is built and tested
 
-A short technical overview for accountants' IT people, CAs and curious users. The source code is private.
+A short overview for business owners, CAs and their IT people: what LedgerKing is made of, where your data lives
+and how every release is checked. The source code is private.
 
-## Building blocks
+## Built on proven technology
 
-| Part | Technology | Job |
+| Part | Technology | Why it matters to you |
 |---|---|---|
-| Accounting core | **Rust** | All rules: posting, numbering, stock, GST, returns, backups, license, plans. |
-| Data | **SQLite** (one file) | All companies in one local file; rules enforced again by triggers and `CHECK`s. |
-| Screens | **React + TypeScript** | Keyboard-first UI, themes, zoom, 7 Indian languages (fonts built in), printing. |
-| Desktop shell | **Tauri** (WebView2) | Windows window, installer (NSIS / MSI), signed updates. |
+| Accounting core | **Rust** | Fast and memory-safe. Every rule (posting, stock, GST, returns, backups, license) lives here, in one place. |
+| Your data | **SQLite**, one file on your PC | Nothing to install or manage, works offline, easy to back up. |
+| Screens | **React + TypeScript** | Keyboard-first, themes, zoom, 7 Indian languages with fonts built in, printing. |
+| Desktop app | **Tauri** (Windows WebView2) | Small installer, starts fast, updates signed by IQKings. |
 
 ```
- Screens (React + TypeScript)
-        │  one command channel ("api")
-        ▼
- Command dispatcher (Rust) ── plan check (Free / Pro) ── license (Ed25519, offline)
-        │
-        ▼
- Engines: posting · vouchers · stock (FIFO) · GST · returns · e-invoice · TDS · bank · backup · import
-        │  one transaction per change (all-or-nothing)
-        ▼
- SQLite data file  (Documents\LedgerKing\Data\LedgerKing.sqlite)
+ Screens  ──►  Accounting core (Rust)  ──►  Your data file (SQLite, on your PC)
+              plan and license checks       every change all-or-nothing
 ```
 
-The screens never write to the database themselves: every action is one command to the Rust core, the same code
-the automated tests run. When the window closes, the core takes the automatic backup before the app exits.
+The screens never write to your data themselves: every action goes through the accounting core, the same code the
+automated tests check. When you close the app, it takes an automatic backup first.
 
-## Key decisions
+## Design choices that keep your books right
 
-- **Money is whole paise** (integers), never floating point; every sum is overflow-checked.
-- **Dates** are ISO text; one SQLite file holds all companies (`company_id` on every row).
-- **Opening balances are derived** from entries (no carry-forward vouchers) and verified at year close.
-- **Stock**: FIFO costing from stock movements; negative stock blocked or warned by setting.
-- **GST**: exclusive and inclusive prices, discount before tax, 2-decimal half-up, CGST = SGST halves, IGST full.
-- **Storage**: foreign keys on, WAL journal, full sync, one `BEGIN IMMEDIATE` transaction per change.
-- **Migrations**: numbered, checksum-verified, applied in order; a data file from a newer version is refused; a
-  failed upgrade rolls back fully, and a verified backup is taken before any upgrade.
-- **Licensing**: Ed25519-signed offline license, device bound; Free plan after expiry, data never locked.
-- **Payments**: no payment gateway in the app. Plans are bought on www.iqkings.com (UPI / bank transfer).
+- **Exact money**: amounts are kept in whole paise, so totals never drift by a paisa.
+- **Openings are calculated, not copied**: last year's closing becomes this year's opening by calculation, and the
+  year close checks it before it finishes.
+- **Stock value by FIFO**; negative stock blocked or warned, as you choose.
+- **GST** with inclusive or exclusive prices, discount before tax, CGST = SGST halves, IGST in full.
+- **All-or-nothing saving**: a power cut never leaves half an entry. Upgrades take a verified backup first and roll
+  back fully on any problem.
+- **Offline license**, signed by IQKings and tied to your computer. When a plan ends, your data stays visible.
+- **No payment inside the app**: plans are bought only on [www.iqkings.com](https://www.iqkings.com).
+
+More: [ACCOUNTING.md](ACCOUNTING.md) (all rules) · [SECURITY.md](SECURITY.md) (data safety).
 
 ## Files on your computer
 
@@ -51,18 +45,18 @@ Documents\LedgerKing\
 └── settings.json              screen and print settings
 ```
 
-## Testing
+## How every release is tested
 
-Every release passes the full test suite:
+Each version must pass the full automated test suite (hundreds of checks) before it is published:
 
-- **Accounting proofs**: random vouchers, cancels and reversals always leave the books balanced and all reports
-  tied out (property tests); a hand-calculated company matches TB, P&L, BS, Day Book and Ledger to the paisa.
+- **Accounting proofs**: random vouchers, cancels and reversals always leave the books balanced and every
+  report tied out; a hand-calculated company matches Trial Balance, P&L, Balance Sheet, Day Book and Ledger to the paisa.
 - **GST**: hand-calculated tax cases, GSTR-1 / 3B tables cross-checked with the ledgers, exports / SEZ, e-invoice.
-- **Stock**: FIFO, negative stock, stock journals, returns, batches, locations.
-- **Safety**: backups refused when damaged or truncated, restore with undo, upgrades with data, **the app killed
-  in the middle of a write three times** and the data still opens with balanced books and gap-free numbers.
-- **Security**: raw database tampering with posted vouchers is blocked, password backups refuse any changed byte,
-  only owner-signed updates are accepted, license tampering and clock rollback are detected.
-- **Screens**: keyboard-only accounting flow in a real browser with the real Rust core; zoom 80–200 % × Windows
-  scaling 100 / 125 / 150 % checked for overlap and clipping; printing checked with real PDF page sizes; every
-  theme's text contrast and English / Hindi text parity tested.
+- **Stock**: FIFO, negative stock, stock journals, returns, batches, locations, manufacturing.
+- **Safety**: damaged backups refused, restore with undo, upgrades with real data, and **the app killed in the middle
+  of saving** — the data still opens with balanced books and no missing numbers.
+- **Security**: direct tampering with saved vouchers is blocked, password backups refuse any changed byte, only
+  IQKings-signed updates are installed, license tampering and a clock turned back are detected.
+- **Screens**: the whole keyboard flow in a real browser with the real accounting core; zoom 80–200 % at Windows
+  scaling 100 / 125 / 150 % checked for cut-off text; printing checked with real page sizes; every language and
+  theme checked for missing text and readable contrast.
