@@ -12,7 +12,7 @@ computer**, follows Indian GST rules and is sold with simple, honest plans on
 ### Why businesses pick IQKings
 
 - 🖥️ **Your PC, your data**: no cloud lock-in, no monthly login just to see your own books.
-- 🇮🇳 **In your language**: English, हिंदी, मराठी, ગુજરાતી, বাংলা, தமிழ் and తెలుగు.
+- 🇮🇳 **In your language**: English and हिंदी today; मराठी, ગુજરાતી, বাংলা, தமிழ் and తెలుగు in the next version.
 - 🧾 **GST ready**: portal JSON for GSTR-1 / 3B, GSTR-2B match, e-invoice and e-way bill JSON in the same app.
 - 🆓 **Free to start**: a 30-day trial with every feature, then a Free plan for small shops, for ever.
 - 🔓 **Your data is never locked**: even on Free, everything you entered stays visible, printable and can be backed up.
@@ -25,7 +25,7 @@ data safe, what changed in each version and what comes next. The source code of 
 
 | Product | What it is | Status | Details |
 |---|---|---|---|
-| <img src="ledgerking/brand/ledgerking-icon.svg" width="20"> **LedgerKing** | Complete offline accounting, GST and inventory for Windows: bills, stock, GST returns (GSTR-1 / 3B JSON), e-invoice and e-way bill JSON, TDS, bank reconciliation, price lists, fixed assets, manufacturing and every report you need. Tally-style keyboard speed in 7 Indian languages. | **1.0.0 released** | [ledgerking/](ledgerking/README.md) · [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking) |
+| <img src="ledgerking/brand/ledgerking-icon.svg" width="20"> **LedgerKing** | Complete offline accounting, GST and inventory for Windows: bills, stock, GST returns (GSTR-1 / 3B JSON), e-invoice and e-way bill JSON, TDS, bank reconciliation and every report you need; price lists, fixed assets, manufacturing and 5 more languages arrive in the next version. Tally-style keyboard speed. | **1.0.0 released** | [ledgerking/](ledgerking/README.md) · [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking) |
 | **BillingKing** | Fast GST billing for shops and counters. | In development | [iqkings.com/billingking](https://www.iqkings.com/billingking) |
 
 ## Buying, licenses and support
