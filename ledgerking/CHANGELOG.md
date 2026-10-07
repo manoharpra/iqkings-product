@@ -3,6 +3,23 @@
 Newest first. Download the latest version from [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking);
 installed copies update themselves (signed updates).
 
+## Next version — coming soon
+
+**Speak your customer's language**
+- Five more languages: **मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు** (with English and हिंदी, that makes seven).
+  Fonts for every script are built in, so matras and conjuncts show correctly, even without internet.
+- **Simple Mode**: one switch shows only the everyday screens for first-time users.
+
+**Grow your business** (Pro)
+- **Price lists**: Wholesale / Retail / Dealer rates; a party's sales bills use its list automatically.
+- **Fixed asset register** with depreciation (Income-tax WDV or straight line), yearly posting, sale or scrap.
+- **Manufacturing**: bill of material, production with shortage check, wastage and true production cost.
+
+**Plans**
+- The Free plan is for small shops: 1 company and **20 sales bills a month**, offline, data never locked.
+- Lifetime licenses: official GST rate updates come with an active Update & Support; a small note on GST pages
+  says when it has ended.
+
 ## 1.0.0 — October 2026
 
 First public release under the name **LedgerKing** (earlier test builds were called "Accounting Pro").

@@ -1,7 +1,8 @@
 # LedgerKing features
 
-Everything below is in **LedgerKing 1.0.0**. Items marked **Pro** need a paid plan or the 30-day trial;
-everything else also works on the Free plan. See [Free and Pro](#free-and-pro) at the end.
+Everything below is in **LedgerKing 1.0.0**, except items marked 🆕, which come in the next version. Items marked
+**Pro** need a paid plan or the 30-day trial; everything else also works on the Free plan. See
+[Free and Pro](#free-and-pro) at the end.
 
 ## Accounting
 
@@ -35,6 +36,16 @@ everything else also works on the Free plan. See [Free and Pro](#free-and-pro) a
 - Delivery challans that become invoices; proforma print. **Pro**
 - **POS counter billing** and Code 128 barcode labels. **Pro**
 - Sales / purchase list with tabs, delete or open any voucher from the list.
+- 🆕 **Price lists**: rate levels such as Wholesale, Retail or Dealer; give a party its list and its sales bills
+  use those rates; fill a list from the selling price with a percentage. **Pro**
+
+## Fixed assets and manufacturing 🆕
+
+- **Fixed asset register**: cost, date put to use, Income-tax WDV or straight-line rate, salvage value, half rate
+  for assets used less than 180 days in the first year, earlier depreciation for old assets. **Pro**
+- Depreciation for the year posted as one journal; year-wise plan; sale or scrap posts the profit or loss. **Pro**
+- **Manufacturing**: bill of material for a batch, production with a stock check, actual quantity used
+  (wastage), other costs (labour, power) added to the product's stock value; cancel from the voucher list. **Pro**
 
 ## GST
 
@@ -98,7 +109,9 @@ Details in [SECURITY.md](SECURITY.md).
 - **Keyboard first**: every screen has a shortcut, Enter goes to the next field, Esc goes back, **F1** shows help
   for the screen with search.
 - **Ctrl+K**: search everything from one box (party, item, bill no., reference, amount or a screen).
-- English and **हिंदी**; themes **Neon**, Light, Dark, High-contrast; zoom 80–200 % (Ctrl + / Ctrl − / Ctrl 0).
+- English and **हिंदी**, and 🆕 **मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు**, with fonts built in for every script.
+- 🆕 **Simple Mode**: one switch in the header shows only the everyday screens.
+- Themes **Neon**, Light, Dark, High-contrast; zoom 80–200 % (Ctrl + / Ctrl − / Ctrl 0).
 - Getting-started card for a new company; focus mode; icon rail menu.
 - Signed automatic updates; problem reports to IQKings support (automatic or "Send a problem report" with a
   screenshot).
@@ -137,7 +150,8 @@ The Free plan does not add: credit / debit notes, batches, more than one locatio
 e-commerce invoices, password backups, and these Pro tools: GST portal JSON and CSV, ITC register, GSTR-2B
 match, payment reminders, recurring vouchers, Excel export, e-invoice, e-way bill, imports, TDS / TCS, bank
 reconciliation, cheque printing, cost centres, budgets, foreign currency, barcodes / POS, quotations and orders,
-logo and invoice print settings, users and roles, outstanding and ageing, interest, Cash Flow, registers.
+logo and invoice print settings, users and roles, outstanding and ageing, interest, Cash Flow, registers, price
+lists, the fixed asset register and manufacturing.
 
 **Nothing is ever locked away.** Data made during the trial or with a license stays visible, printable and can be
 backed up on the Free plan. Buying a plan lifts every limit at once.

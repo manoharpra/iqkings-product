@@ -8,7 +8,7 @@ A short technical overview for accountants' IT people, CAs and curious users. Th
 |---|---|---|
 | Accounting core | **Rust** | All rules: posting, numbering, stock, GST, returns, backups, license, plans. |
 | Data | **SQLite** (one file) | All companies in one local file; rules enforced again by triggers and `CHECK`s. |
-| Screens | **React + TypeScript** | Keyboard-first UI, themes, zoom, English / हिंदी, printing. |
+| Screens | **React + TypeScript** | Keyboard-first UI, themes, zoom, 7 Indian languages (fonts built in), printing. |
 | Desktop shell | **Tauri** (WebView2) | Windows window, installer (NSIS / MSI), signed updates. |
 
 ```

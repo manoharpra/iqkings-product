@@ -4,7 +4,7 @@
 
 <p align="center">
   <b>Offline accounting, GST and inventory software for Windows.</b><br>
-  Made in India · Works without internet · English and हिंदी · Keyboard-first
+  Made in India · Works without internet · 7 Indian languages · Keyboard-first
 </p>
 
 <p align="center">
@@ -18,6 +18,15 @@
 
 <p align="center"><img src="screenshots/ui_neon_sales_invoice_F8.png" alt="LedgerKing sales invoice (F8)" width="900"></p>
 
+<p align="center"><b>Bills, stock, GST returns and complete books: in your own language, on your own PC, without internet.</b><br>
+Try every Pro feature free for 30 days. No card, no sign-up form inside the app.</p>
+
+## Made for
+
+| 🏪 Shops and retail | 🚚 Traders and distributors | 🏭 Small manufacturers | 📒 Accountants and CAs |
+|---|---|---|---|
+| Fast GST bills, POS counter, barcodes, 58 / 80 mm thermal print, UPI QR on the bill | Party-wise price lists, orders, part delivery, credit limits, payment reminders on WhatsApp | Bill of material, production with shortage check and real cost, fixed assets with depreciation | Many companies, Tally import, GSTR-1 / 3B JSON, GSTR-2B match, TDS worksheets, period locks |
+
 ## What LedgerKing does
 
 LedgerKing keeps the complete books of a shop, trader, small business or accountant on your own Windows PC:
@@ -30,6 +39,9 @@ LedgerKing keeps the complete books of a shop, trader, small business or account
   bill JSON, RCM, ITC register, composition and unregistered dealers, exports and SEZ.
 - **More**: TDS / TCS, bank reconciliation, cheque printing, cost centres, budgets, foreign currency, payment
   reminders on WhatsApp / e-mail, recurring bills (rent, salary, EMI), month-end party statements.
+- **Grow with it**: party-wise **price lists** (wholesale, retail, dealer), a **fixed asset register** with
+  depreciation (Income-tax WDV or straight line, sale / scrap with profit or loss) and **manufacturing** with a
+  bill of material, shortage check and production cost.
 - **Move in easily**: import from Tally (XML), Excel / CSV, and Busy / Marg exports.
 
 Full list: **[FEATURES.md](FEATURES.md)**.
@@ -43,23 +55,28 @@ Full list: **[FEATURES.md](FEATURES.md)**.
 | **Books always balance** | Every rule is checked twice: in the app and again inside the database. A posted voucher can never be silently changed. See [ACCOUNTING.md](ACCOUNTING.md). |
 | **GST built in** | Portal JSON files, GSTR-2B match, e-invoice and e-way bill JSON in the same app. See [GST.md](GST.md). |
 | **Your data is safe** | Verified backups, password-protected backup files, app lock with users and roles, a Recycle Bin for deleted vouchers. See [SECURITY.md](SECURITY.md). |
-| **Easy to read** | English and हिंदी, Neon / Light / Dark / High-contrast themes, zoom 80–200 %. |
+| **Your language** | English, हिंदी, मराठी, ગુજરાતી, বাংলা, தமிழ் and తెలుగు, with fonts built in so every matra shows correctly, even offline. |
+| **Simple when you want** | **Simple Mode** shows only the everyday screens for a first-time user; switch it off for the full app. |
+| **Easy to read** | Neon / Light / Dark / High-contrast themes, zoom 80–200 %. |
+| **Moving is easy** | Bring your masters and entries from Tally, Excel, Busy or Marg, with a preview before anything is saved. |
 | **Prints anywhere** | A4, 80 mm and 58 mm thermal paper, your logo, three invoice layouts, UPI "Scan to pay" QR on bills. |
 
 ## Plans
 
-| | Free | Pro |
+| | Free: for small shops | Pro: for growing, medium and big businesses |
 |---|---|---|
 | How you get it | After the 30-day trial, free for ever | Any paid plan: Monthly, Yearly or Lifetime |
 | Companies | 1 | As many as your plan allows |
-| Sales bills | 30 a month | No limit |
+| Sales bills | 20 a month | No limit |
+| Works offline | ✓ | ✓ |
 | Accounting, GST bills, reports | ✓ | ✓ |
-| GST portal JSON, GSTR-2B, e-invoice, e-way bill, TDS, imports, bank reco, reminders, … | — | ✓ |
+| GST portal JSON, GSTR-2B, e-invoice, e-way bill, TDS, imports, bank reco, reminders, price lists, fixed assets, manufacturing, … | — | ✓ |
 | Your data | Never locked: everything stays visible, printable and can be backed up | ✓ |
 
 - **Every Pro feature is free for the first 30 days.** No card needed.
 - **Lifetime**: buy once and use it for ever. The first year of Update & Support (new versions, GST changes,
-  help) is included; after that it can be renewed every year if you want it. The software keeps working without it.
+  help) is included; after that it can be renewed every year if you want it. The software keeps working without
+  it; new versions and official GST rate updates come with an active Update & Support.
 - Current prices and offers: **[iqkings.com/ledgerking](https://www.iqkings.com/ledgerking#pricing)**. Payment is
   only on the website (UPI or bank transfer), never inside the app.
 
@@ -98,6 +115,12 @@ All pictures: [screenshots/](screenshots/README.md).
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How the app is built and tested |
 | [CHANGELOG.md](CHANGELOG.md) | What changed in each version |
 | [ROADMAP.md](ROADMAP.md) | What is planned next |
+
+## Start today
+
+1. **Download** LedgerKing from [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking) and install it (no administrator rights needed).
+2. **Create your company** or import it from Tally: the getting-started card walks you through it.
+3. **Use every Pro feature free for 30 days.** Then keep the Free plan for ever, or pick a plan that fits your business.
 
 ## Help and support
 
