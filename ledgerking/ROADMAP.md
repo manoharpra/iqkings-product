@@ -8,7 +8,6 @@ on [www.iqkings.com](https://www.iqkings.com).
 
 | Item | Why |
 |---|---|
-| **Compensation cess** | Needed only for tobacco / pan masala items; today the item master warns for those HSN codes. |
 | **Tax on advances received** | Advance receipts for goods / services before the invoice. |
 | **Amendments of earlier returns** | GSTR-1 amendment tables for corrections of earlier months. |
 | **Direct e-invoice / e-way bill upload through a GSP** | One click instead of JSON upload; needs a GSP account and API keys. |
@@ -20,6 +19,10 @@ on [www.iqkings.com](https://www.iqkings.com).
 | Payroll | Salary structure, attendance, payslips. |
 | Multi-PC / network use | Several computers on one set of books. Today the data file must be on a local disk. |
 | TDS FVU file inside the app | Today the quarterly worksheet is ready and the FVU file is made with the government RPU. |
+
+## Not needed
+
+- **Compensation cess:** GST compensation cess ended on 01-02-2026: tobacco / pan masala now pay 40% GST, and the new excise duty and Health Security cess are paid by the manufacturer, not on GST bills. LedgerKing therefore needs no cess calculation; GST files send cess as 0.
 
 ## Done (moved from this list)
 

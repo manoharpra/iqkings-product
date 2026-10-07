@@ -89,5 +89,7 @@ Exports: bill-to is the foreign buyer, ship-to is the port / ICD / airport in In
 
 ## Not supported yet
 
-Compensation cess (now only tobacco / pan masala: the item master warns for those HSN codes), tax on advances
-received, amendments of earlier returns, direct IRN / e-way bill upload through a GSP. See [ROADMAP.md](ROADMAP.md).
+Tax on advances received, amendments of earlier returns, direct IRN / e-way bill upload through a GSP. See
+[ROADMAP.md](ROADMAP.md).
+
+**Compensation cess is not needed:** GST compensation cess ended on 01-02-2026: tobacco / pan masala now pay 40% GST, and the new excise duty and Health Security cess are paid by the manufacturer, not on GST bills. LedgerKing therefore needs no cess calculation; GST files send cess as 0.

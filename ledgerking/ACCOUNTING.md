@@ -162,7 +162,8 @@ Posting re-validates everything from the stored draft, inside one transaction:
 - GSTR-3B warns when GST ledgers contain manual journal entries not covered by invoices.
 - CSV: offline-tool column layout, dd-mm-yyyy dates, UTF-8 BOM, formula-injection guard, atomic file writes.
 - Portal JSON (GSTR-1 / GSTR-3B) for upload through the GST offline tool; check the first upload in the offline tool.
-- Not supported yet: compensation cess, tax on advances received, amendments of earlier returns.
+- Not supported yet: tax on advances received, amendments of earlier returns.
+- Compensation cess: not needed (it ended on 01-02-2026; GST files send cess as 0).
 
 ## 17. Backup and restore
 - Backup = SQLite online backup API (never a raw file copy) + manifest (SHA-256, size, versions, companies).
@@ -179,5 +180,6 @@ Done: bank reconciliation, TDS / TCS (incl. quarterly worksheet), e-invoice / e-
 recorded, foreign-currency notes with forex gain / loss on settlement, cost centres, budgets, GSTR-2B
 reconciliation with purchase bills (1.0.0).
 
-Still later: compensation cess, tax on advances, return amendments, direct IRN / e-way bill upload through a GSP
+Still later: tax on advances, return amendments, direct IRN / e-way bill upload through a GSP
 (needs a GSP account), TDS FVU file (made with the RPU), payroll, multi-PC / network use.
+Not needed: compensation cess (ended on 01-02-2026).

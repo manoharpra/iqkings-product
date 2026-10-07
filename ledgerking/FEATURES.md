@@ -126,9 +126,10 @@ Details in [SECURITY.md](SECURITY.md).
 
 ## Free and Pro
 
-**Pro** = any paid plan (Monthly, Yearly, Lifetime) or the first 30 days. **Free** = after the trial, for ever.
+**Pro** = any paid plan (Monthly, Yearly, Lifetime) or the first 30 days: every feature, for medium and big businesses.
+**Free** = after the trial, for ever.
 
-The Free plan keeps: one company, up to **30 sales bills a month**, all accounting vouchers, GST bills, Day Book,
+The Free plan is for small shops. It keeps: one company, up to **20 sales bills a month**, works offline, all accounting vouchers, GST bills, Day Book,
 Ledger, Trial Balance, P&L, Balance Sheet, GSTR-1 and GSTR-3B on screen, printing on all paper sizes, backups and
 restore.
 
