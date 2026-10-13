@@ -23,13 +23,13 @@
 - ✅ **Stock that adds up**: items, units, batches, godowns, FIFO value, low-stock list, orders and challans.
 - ✅ **Complete books**: Day Book, Ledger, Trial Balance, P&L, Balance Sheet, Cash Flow, Outstanding with ageing.
 - ✅ **Works without internet**: your data stays on your PC; internet only for license activation and updates.
-- ✅ **Free to start**: every Pro feature free for 30 days, then a Free plan for small shops, for ever.
+- ✅ **Try it free**: every feature during the trial; what you enter is never locked away.
 
 ## Who it is for
 
 | 🏪 Shops and retail | 🚚 Traders and distributors | 🏭 Small manufacturers | 📒 Accountants and CAs |
 |---|---|---|---|
-| Quick bills, POS counter with barcodes, thermal print, UPI QR | Price lists 🆕, orders with part delivery, credit limits, WhatsApp reminders | Bill of material 🆕, production cost 🆕, fixed assets with depreciation 🆕 | Many companies, Tally import, return JSON, TDS worksheet, period locks |
+| Quick bills, POS counter with barcodes, thermal print, UPI QR | Price lists, orders with part delivery, credit limits, WhatsApp reminders, bill scan 🆕 | Bill of material, production cost, fixed assets with depreciation | Many companies, Tally import, return JSON, TDS worksheet, period locks |
 
 ## Everything in one app
 
@@ -37,44 +37,47 @@
 |---|---|
 | **Accounting** | F4–F9 vouchers, credit / debit notes, gap-free numbers, cancel or reverse, period locks, year close, Recycle Bin |
 | **Billing** | GST sales and purchase bills, last rate per party, profit on the bill, quotations, sales / purchase orders, challans, POS |
+| **Bill scan** 🆕 | The supplier's PDF bill or e-invoice QR fills the purchase bill, item lines too; read on your PC, offline |
 | **Stock** | Units, HSN, GST rate history, batches, godowns and transfers, FIFO, stock journal, low stock |
 | **GST** | GSTR-1 / 3B (screen, CSV, portal JSON), GSTR-2B match, ITC register, RCM, composition, exports / SEZ, e-invoice, e-way bill |
 | **Money** | Payment reminders (WhatsApp / e-mail), bank reconciliation, cheque printing, TDS / TCS with 26Q / 27EQ worksheet |
-| **Grow** 🆕 | Party-wise price lists, fixed asset register with Income-tax depreciation, manufacturing with bill of material |
-| **Move in** | Import from Tally (XML), Excel / CSV (🆕 up to 1,00,000 rows a file), Busy and Marg, with a preview before anything is saved |
+| **Grow** | Party-wise price lists, fixed asset register with Income-tax depreciation, manufacturing with bill of material |
+| **Move in** | Import from Tally (XML), Excel / CSV (up to 1,00,000 rows a file), Busy and Marg, with a preview before anything is saved; 🆕 Tally checks against your books after the import |
 
 🆕 = coming in the next version. Full list with shortcuts: **[FEATURES.md](FEATURES.md)**.
 
 ## Why LedgerKing
 
 - **Fast**: keyboard first, every screen has a shortcut, **Ctrl+K** finds any party, item, bill or amount.
-- **Big books, still fast** 🆕: bills stay quick as your books grow; a year of vouchers imports from one file.
-- **Your language**: English, हिंदी, and 🆕 मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు, with fonts built in.
-- **Simple when you want** 🆕: Simple Mode shows only the everyday screens for first-time users.
+- **Big books, still fast**: bills stay quick as your books grow; a year of vouchers imports from one file.
+- **Your language**: English, हिंदी, मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు, with fonts built in.
+- **Simple when you want**: Simple Mode shows only the everyday screens for first-time users.
 - **Books always balance**: every rule is checked in the app and again inside the database ([ACCOUNTING.md](ACCOUNTING.md)).
 - **Data is safe**: verified backups, auto backup on close, password backups, app lock with users and roles ([SECURITY.md](SECURITY.md)).
-- **Never locked out**: even on the Free plan, everything you entered stays visible, printable and can be backed up.
+- **Never locked out**: even without an active plan, everything you entered stays visible, printable, exportable and can be backed up.
 
 ## Plans
 
-| | **Free**: small shops | **Pro**: growing, medium and big businesses |
+| | **Trial** | **Pro**: Monthly, Yearly or Lifetime |
 |---|---|---|
-| Price | Free for ever, after the 30-day trial | Monthly, Yearly or Lifetime |
-| Companies | 1 | As your plan allows |
-| Sales bills | 20 a month | No limit |
-| Accounting, GST bills, reports, offline | ✓ | ✓ |
-| Return JSON, GSTR-2B, e-invoice, e-way bill, TDS, imports, bank reco, reminders, multi-godown, orders … | — | ✓ |
+| Price | Free | [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking#pricing) |
+| Every feature | ✓ | ✓ |
+| Companies | ✓ | as your plan allows |
+| When it ends | read-only: view, print, export and back up; no new entries | Monthly / Yearly: read-only until renewed. Lifetime: never ends |
 
-- **Lifetime**: pay once, use for ever. The first year of Update & Support (new versions, official GST rate
-  updates, help) is included, then optional yearly renewal.
-- Prices and offers: **[iqkings.com/ledgerking](https://www.iqkings.com/ledgerking#pricing)**. Pay by UPI or bank
-  transfer on the website. Exact Free / Pro list: [FEATURES.md](FEATURES.md#free-and-pro).
+- **Lifetime**: pay once, use for ever. The first year of **Update & Support** (new versions, official GST rate
+  updates, help) is included, then an optional yearly renewal. Versions released while it runs are yours for ever.
+- **Trial length**: 7 days from the next version. LedgerKing 1.0.0 (today's download) gives 30 days, then a Free
+  plan for small shops (1 company, 20 sales bills a month); the next version replaces that Free plan with read-only.
+- Pay by UPI on the website: the payment screenshot is checked at once and your **product key arrives by e-mail**
+  with the invoice. Lost it? Account → Licenses → "Lost your key? Email me a new one".
 
 ## Start in 3 steps
 
 1. **Download** from [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking) and install (no administrator rights needed).
+   Windows may say "Windows protected your PC" for a new app: click **More info → Run anyway**.
 2. **Create your company**, or import it from Tally, Excel, Busy or Marg.
-3. **Make your first bill** with **F8**. Every Pro feature is free for the first 30 days.
+3. **Make your first bill** with **F8**. When you buy, paste the e-mailed product key in **License (Alt+U) → Activate online**.
 
 **Needs:** Windows 10 or 11 (64-bit). Data is kept in `Documents\LedgerKing` on a local disk (not inside a live
 OneDrive / Dropbox folder; backups can go anywhere).
@@ -88,7 +91,7 @@ OneDrive / Dropbox folder; backups can go anywhere).
 | ![Bill with profit](screenshots/ui_bill_profit.png) | ![Day Book in Hindi](screenshots/ui_neon_hi_zoom125_AltD.png) |
 | Bill with discount and estimated profit | Day Book in हिंदी |
 
-**Coming in the next version** 🆕
+**New in 1.0.0**
 
 | | |
 |---|---|

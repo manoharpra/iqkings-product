@@ -1,6 +1,6 @@
 # LedgerKing roadmap
 
-What is planned after 1.0.0. Dates are not promised: GST law changes and customer requests decide the order.
+What is planned next. Dates are not promised: GST law changes and customer requests decide the order.
 Tell us what you need: open a **Feature request** issue in this repository or write to support from your account
 on [www.iqkings.com](https://www.iqkings.com).
 
@@ -10,7 +10,7 @@ on [www.iqkings.com](https://www.iqkings.com).
 |---|---|
 | **Tax on advances received** | Advance receipts for goods / services before the invoice. |
 | **Amendments of earlier returns** | GSTR-1 amendment tables for corrections of earlier months. |
-| **Bill from a photo** | Scan a supplier's bill (photo or PDF): the e-invoice QR and the printed text fill the purchase bill for you to check. Works offline. |
+| **Bill from a photo** | Read the printed text of a photographed supplier bill too (the PDF and e-invoice QR part is done, see below). Works offline. |
 | **Direct e-invoice / e-way bill upload through a GSP** | One click instead of JSON upload; needs a GSP account and API keys. |
 
 ## Later
@@ -19,6 +19,8 @@ on [www.iqkings.com](https://www.iqkings.com).
 |---|---|
 | Payroll | Salary structure, attendance, payslips. |
 | Multi-PC / network use | Several computers on one set of books. Today the data file must be on a local disk. |
+| Plan names in the app | Silver / Gold instead of one "Pro"; Gold with more computers on one data file (needs network use). |
+| Cloud backup, job work | On request. |
 | TDS FVU file inside the app | Today the quarterly worksheet is ready and the FVU file is made with the government RPU. |
 
 ## Not needed
@@ -26,6 +28,10 @@ on [www.iqkings.com](https://www.iqkings.com).
 - **Compensation cess:** GST compensation cess ended on 01-02-2026: tobacco / pan masala now pay 40% GST, and the new excise duty and Health Security cess are paid by the manufacturer, not on GST bills. LedgerKing therefore needs no cess calculation; GST files send cess as 0.
 
 ## Done (moved from this list)
+
+- Bill scan from the supplier's PDF / e-invoice QR, with item lines and supplier memory — **next version**
+- Tally import checks against your books, debit note to a customer, GSTR-1 "Check with books" — **next version**
+- Price lists, fixed asset register, manufacturing, five more languages, Simple Mode, 1,00,000-row imports — **1.0.0**
 
 - GSTR-2B reconciliation with purchase bills — **1.0.0**
 - Purchase orders, part delivery of sales orders — **1.0.0**

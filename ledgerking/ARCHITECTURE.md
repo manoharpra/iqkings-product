@@ -29,7 +29,10 @@ automated tests check. When you close the app, it takes an automatic backup firs
 - **GST** with inclusive or exclusive prices, discount before tax, CGST = SGST halves, IGST in full.
 - **All-or-nothing saving**: a power cut never leaves half an entry. Upgrades take a verified backup first and roll
   back fully on any problem.
-- **Offline license**, signed by IQKings and tied to your computer. When a plan ends, your data stays visible.
+- **Offline license**, signed by IQKings and tied to your computer. When a plan ends, your data stays visible,
+  printable and exportable (read-only from the next version).
+- 🆕 **Bill scan on your PC**: supplier PDFs and e-invoice QR codes are read inside the app (no upload, no internet),
+  under the same strict security rules as the rest of the app.
 - **No payment inside the app**: plans are bought only on [www.iqkings.com](https://www.iqkings.com).
 
 More: [ACCOUNTING.md](ACCOUNTING.md) (all rules) · [SECURITY.md](SECURITY.md) (data safety).
@@ -53,6 +56,10 @@ Each version must pass the full automated test suite (hundreds of checks) before
   report tied out; a hand-calculated company matches Trial Balance, P&L, Balance Sheet, Day Book and Ledger to the paisa.
 - **GST**: hand-calculated tax cases, GSTR-1 / 3B tables cross-checked with the ledgers, exports / SEZ, e-invoice.
 - **Stock**: FIFO, negative stock, stock journals, returns, batches, locations, manufacturing.
+- **Big books**: a stress test with thousands of ledgers, items and GST bills, and imports of up to 1,00,000
+  rows; a bill saves in about 5 ms however big the books are.
+- 🆕 **Bill scan**: real supplier PDFs and QR pictures, item rows with discounts, wrong totals and look-alike
+  numbers (e-way bill, due date) that must not be read as the bill no. or date.
 - **Safety**: damaged backups refused, restore with undo, upgrades with real data, and **the app killed in the middle
   of saving** — the data still opens with balanced books and no missing numbers.
 - **Security**: direct tampering with saved vouchers is blocked, password backups refuse any changed byte, only

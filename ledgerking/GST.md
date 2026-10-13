@@ -24,7 +24,9 @@ Change the registration in **Company Details**. The GSTIN and state of the compa
 - **Same state** (company state = place of supply): **CGST and SGST**, each at half the rate, always equal.
 - **Other state**: **IGST** at the full rate.
 - Rounding: 2 decimals, half-up, per line and per tax. Rounding the bill to the rupee is optional and posted to a
-  separate Round Off ledger.
+  separate Round Off ledger. 🆕 Next version: tax rounded once per GST rate per bill, as the portal does.
+- 🆕 **Purchase bills**: IGST or CGST + SGST decided by the supplier's state (from the GSTIN when the ledger has no
+  state).
 - Place of supply is the party's state unless you choose another on the bill. A taxed bill without company state or
   place of supply is refused, never guessed.
 - **Exempt, Nil-rated and Non-GST** items are kept apart (GSTR-1 table 8).
@@ -44,12 +46,22 @@ Change the registration in **Company Details**. The GSTIN and state of the compa
 | **GSTR-1** | B2B, B2CL, B2CS, credit / debit notes (CDNR, CDNUR), exports, SEZ, e-commerce, nil / exempt / non-GST, HSN summary, documents issued (including cancelled numbers) | **Portal JSON** and CSV **Pro** |
 | **GSTR-3B** | 3.1(a)–(e), 3.2, 4 (ITC, reverse-charge ITC separately), 5, tax payable per head before set-off | **Portal JSON** and CSV **Pro** |
 
-- GSTR-1 and GSTR-3B are shown on screen on every plan; the files need Pro.
+- GSTR-1 and GSTR-3B are shown on screen on every plan; in 1.0.0 the files need Pro.
+- 🆕 **Debit note to a customer** (Debit Note (Sales)): goes to GSTR-1 (CDN, type D) and as an e-invoice debit
+  note; no stock movement.
+- 🆕 GSTR-1 **"Check with books"**; documents issued grouped by number series; credit notes on B2C large invoices
+  reported against the original invoice.
 - Every GSTR-1 build checks that all tables and the HSN summary add up to the bill totals.
 - GSTR-3B warns if GST ledgers have manual journal entries that no bill explains.
 - B2C large limit: ₹1,00,000 by default (a setting; confirm with your CA).
 - CSV files follow the offline-tool column layout (dd-mm-yyyy dates, UTF-8).
 - How to upload the JSON: [iqkings.com/guides/how-to-file-gstr-1-json](https://www.iqkings.com/guides/how-to-file-gstr-1-json).
+
+## Bill scan 🆕
+
+On a purchase bill (F9), **Scan supplier bill (PDF / QR)** reads the supplier's PDF or e-invoice QR on your PC
+(offline): GSTIN, bill no., date, taxable value, CGST / SGST / IGST, total and the item lines with HSN and GST %.
+The signed e-invoice QR wins over the printed text. You check and save.
 
 ## GSTR-2B match **Pro**
 

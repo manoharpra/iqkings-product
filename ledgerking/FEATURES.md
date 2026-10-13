@@ -1,8 +1,8 @@
 # LedgerKing features
 
-Everything below is in **LedgerKing 1.0.0**, except items marked 🆕, which come in the next version. Items marked
-**Pro** need a paid plan or the 30-day trial; everything else also works on the Free plan. See
-[Free and Pro](#free-and-pro) at the end.
+Everything below is in **LedgerKing 1.0.0**, except items marked 🆕, which come in the next version. In 1.0.0,
+items marked **Pro** need a paid plan or the trial; the rest also works on the 1.0.0 Free plan. From the next
+version every feature is in the trial and in every plan (see [Plans](#plans)).
 
 ## Accounting
 
@@ -36,10 +36,22 @@ Everything below is in **LedgerKing 1.0.0**, except items marked 🆕, which com
 - Delivery challans that become invoices; proforma print. **Pro**
 - **POS counter billing** and Code 128 barcode labels. **Pro**
 - Sales / purchase list with tabs, delete or open any voucher from the list.
-- 🆕 **Price lists**: rate levels such as Wholesale, Retail or Dealer; give a party its list and its sales bills
+- **Price lists**: rate levels such as Wholesale, Retail or Dealer; give a party its list and its sales bills
   use those rates; fill a list from the selling price with a percentage. **Pro**
 
-## Fixed assets and manufacturing 🆕
+## Bill scan 🆕
+
+- **Scan supplier bill (PDF / QR)** on the Purchase bill (F9), or drop the file on the form. Read on your PC,
+  offline; nothing is uploaded.
+- From the **e-invoice QR** (page 1 or 2, or a picture of the QR) and the bill text: supplier GSTIN (check digit
+  verified), bill no., date, taxable value, CGST / SGST / IGST, total; the supplier ledger is found by GSTIN.
+- Warns when this supplier's bill no. is already entered; checks taxable + GST = total.
+- **Item lines**: quantity, rate, amount, discount %, HSN, unit and GST % per row, matched with your stock items;
+  the supplier's wording is remembered for next time. Missing items or suppliers can be created from the bill.
+- Green = read, amber = check it, red = not on the bill. You check and save; nothing is posted by itself.
+- Photo of a printed bill (text from the picture): planned, see [ROADMAP.md](ROADMAP.md).
+
+## Fixed assets and manufacturing
 
 - **Fixed asset register**: cost, date put to use, Income-tax WDV or straight-line rate, salvage value, half rate
   for assets used less than 180 days in the first year, earlier depreciation for old assets. **Pro**
@@ -58,6 +70,9 @@ Details in [GST.md](GST.md).
 - **E-invoice JSON** (NIC schema), IRN and signed QR recorded and printed. **Pro**
 - **E-way bill JSON**, e-way bill number recorded and printed; exports with port / ICD / airport. **Pro**
 - Exports (with / without IGST), SEZ, deemed exports, e-commerce operator sales. **Pro**
+- 🆕 **Debit note to a customer** (Debit Note (Sales)): in GSTR-1 and as an e-invoice debit note.
+- 🆕 Purchase IGST or CGST + SGST from the supplier's state; tax rounded once per GST rate per bill; GSTR-1
+  "Check with books".
 - **TDS / TCS**: sections, PAN rates, challans, month-wise dues, quarterly 26Q / 27EQ worksheet, party
   statement. **Pro**
 
@@ -89,7 +104,10 @@ Details in [GST.md](GST.md).
 
 - **Tally**: masters and Day Book XML (including item vouchers, stock journals, manufacturing journals, delivery
   notes). A summary per kind, a problem list (CSV) and "import the good entries".
-- **Excel / CSV**: ledgers with opening balances, stock items, old vouchers with column matching; 🆕 up to
+- 🆕 Tally units and missing base units, invoices keep their Tally numbers, credit / debit notes linked to their
+  invoice, cancelled numbers kept; company state / GSTIN / books-beginning checks; after the import the counts,
+  values, closing balances and stock are compared with the Tally file; problems grouped by reason with a fix.
+- **Excel / CSV**: ledgers with opening balances, stock items, old vouchers with column matching; up to
   **1,00,000 rows per file**.
 - **Busy / Marg** export column names are recognised.
 - Every import shows a preview first and is all-or-nothing.
@@ -110,8 +128,8 @@ Details in [SECURITY.md](SECURITY.md).
 - **Keyboard first**: every screen has a shortcut, Enter goes to the next field, Esc goes back, **F1** shows help
   for the screen with search.
 - **Ctrl+K**: search everything from one box (party, item, bill no., reference, amount or a screen).
-- English and **हिंदी**, and 🆕 **मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు**, with fonts built in for every script.
-- 🆕 **Simple Mode**: one switch in the header shows only the everyday screens.
+- **English, हिंदी, मराठी, ગુજરાતી, বাংলা, தமிழ், తెలుగు**, with fonts built in for every script.
+- **Simple Mode**: one switch in the header shows only the everyday screens.
 - Themes **Neon**, Light, Dark, High-contrast; zoom 80–200 % (Ctrl + / Ctrl − / Ctrl 0).
 - Getting-started card for a new company; focus mode; icon rail menu.
 - Signed automatic updates; problem reports to IQKings support (automatic or "Send a problem report" with a
@@ -138,21 +156,25 @@ Details in [SECURITY.md](SECURITY.md).
 | Alt+H | Home | Ctrl+P | Print |
 | F1 | Help and all shortcuts | Esc | Back |
 
-## Free and Pro
+## Plans
 
-**Pro** = any paid plan (Monthly, Yearly, Lifetime) or the first 30 days: every feature, for medium and big businesses.
-**Free** = after the trial, for ever.
+**From the next version**: a **7-day trial** with every feature, then a paid plan (Monthly, Yearly or Lifetime)
+with every feature. Without an active plan (trial over, Monthly / Yearly ended, or a version newer than a Lifetime
+license's Update & Support) LedgerKing is **read-only**: everything you entered stays visible, printable,
+exportable (Excel, GST CSV / JSON) and can be backed up and restored; new entries need a plan. A license may
+limit the number of companies.
 
-The Free plan is for small shops. It keeps: one company, up to **20 sales bills a month**, works offline, all accounting vouchers, GST bills, Day Book,
-Ledger, Trial Balance, P&L, Balance Sheet, GSTR-1 and GSTR-3B on screen, printing on all paper sizes, backups and
-restore.
+**LedgerKing 1.0.0 (today's download)**: 30-day trial with every feature, then a Free plan for small shops.
 
-The Free plan does not add: credit / debit notes, batches, more than one location, challans, export / SEZ /
-e-commerce invoices, password backups, and these Pro tools: GST portal JSON and CSV, ITC register, GSTR-2B
-match, payment reminders, recurring vouchers, Excel export, e-invoice, e-way bill, imports, TDS / TCS, bank
-reconciliation, cheque printing, cost centres, budgets, foreign currency, barcodes / POS, quotations and orders,
-logo and invoice print settings, users and roles, outstanding and ageing, interest, Cash Flow, registers, price
-lists, the fixed asset register and manufacturing.
+- **Pro** = any paid plan or the trial: every feature.
+- **Free (1.0.0 only)**: one company, up to **20 sales bills a month**, offline, all accounting vouchers, GST
+  bills, Day Book, Ledger, Trial Balance, P&L, Balance Sheet, GSTR-1 and GSTR-3B on screen, printing on all paper
+  sizes, backups and restore. It does not add: credit / debit notes, batches, more than one location, challans,
+  export / SEZ / e-commerce invoices, password backups, GST portal JSON and CSV, ITC register, GSTR-2B match,
+  payment reminders, recurring vouchers, Excel export, e-invoice, e-way bill, imports, TDS / TCS, bank
+  reconciliation, cheque printing, cost centres, budgets, foreign currency, barcodes / POS, quotations and
+  orders, logo and invoice print settings, users and roles, outstanding and ageing, interest, Cash Flow,
+  registers, price lists, the fixed asset register and manufacturing.
 
-**Nothing is ever locked away.** Data made during the trial or with a license stays visible, printable and can be
-backed up on the Free plan. Buying a plan lifts every limit at once.
+**Nothing is ever locked away**, on any version: what you entered stays visible, printable and can be backed up.
+Buying a plan lifts every limit at once.

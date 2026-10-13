@@ -48,11 +48,17 @@ can always be recovered.
 
 - The license is a signed file (Ed25519) bound to your computer. It is checked offline; a changed license or a
   clock turned back is detected.
-- **Data is never locked**: when a plan ends, the Free plan keeps everything visible, printable and exportable.
+- **Data is never locked**: when a plan ends, everything stays visible, printable, exportable and can be backed
+  up (1.0.0: on the Free plan; next version: read-only until the plan is renewed).
+- **One license, one computer**: the product key is e-mailed to you, never shown on the website. Lost it? Account
+  → Licenses → "Lost your key? Email me a new one": the old key stops working, the computer already activated
+  keeps working, and the new key still works on that one computer only.
 - Changing computers? **Move license to another computer** (License screen, Alt+U) frees it online so you can
   activate it on the new PC.
 - **Updates are signed by IQKings.** The app installs an update only if the signature, the https address, the file
   name, the size and the SHA-256 of the installer all match. Any changed file is deleted, not run.
+- Installers are downloaded only from your account on www.iqkings.com (short-lived signed links). Account →
+  Downloads offers the versions your Update & Support covers; older versions always stay available.
 - Payments are made only on [www.iqkings.com](https://www.iqkings.com) (UPI or bank transfer), never inside the app.
   IQKings will never ask for your password, OTP or license file by phone or chat.
 

@@ -107,6 +107,8 @@ Posting re-validates everything from the stored draft, inside one transaction:
   A negative position is valued at the last known cost; the next purchase fills it first.
 - Trading account: opening stock (value at period start) and closing stock (value at period end). Balance Sheet shows
   closing stock under assets. Trial Balance shows an "Opening Stock" line (value at FY start).
+- 🆕 Next version: a party whose balance is on the unusual side (a customer you owe, a supplier who owes you) is
+  shown in the Balance Sheet as an **advance** on the other side, as accountants expect.
 - Opening stock counts in the "difference in opening balances" (enter capital / other openings to match it).
 - Opening stock is locked like opening balances (after a year close or a lock over books beginning).
 - An item's unit cannot change once it has opening stock or movements; a used item cannot be deleted (mark inactive).
