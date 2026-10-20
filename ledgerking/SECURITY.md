@@ -31,12 +31,12 @@ can always be recovered.
   when the last backup is old.
 - **Restore** first makes a verified safety copy of the current data, then restores; on any problem it goes back
   automatically.
-- **Password-protected backups** (**Pro**): one encrypted file (Argon2id key + XChaCha20-Poly1305). A wrong password
+- **Password-protected backups**: one encrypted file (Argon2id key + XChaCha20-Poly1305). A wrong password
   or any changed byte is refused; no unprotected copy is left behind. Keep the password safe: IQKings cannot
   recover it.
 - Keep a copy away from the computer too: a backup on the same disk does not survive a disk failure.
 
-## App lock, users and roles **Pro**
+## App lock, users and roles
 
 - Password to open the app; passwords are stored only as Argon2id hashes.
 - Users with roles: **Admin** (everything), **Accountant** (masters, vouchers, cancel / reverse, locks),
@@ -49,7 +49,7 @@ can always be recovered.
 - The license is a signed file (Ed25519) bound to your computer. It is checked offline; a changed license or a
   clock turned back is detected.
 - **Data is never locked**: when a plan ends, everything stays visible, printable, exportable and can be backed
-  up (1.0.0: on the Free plan; next version: read-only until the plan is renewed).
+  up (read-only until the plan is renewed; 1.0.0 used a Free plan instead).
 - **One license, one computer**: the product key is e-mailed to you, never shown on the website. Lost it? Account
   → Licenses → "Lost your key? Email me a new one": the old key stops working, the computer already activated
   keeps working, and the new key still works on that one computer only.

@@ -24,7 +24,7 @@ Change the registration in **Company Details**. The GSTIN and state of the compa
 - **Same state** (company state = place of supply): **CGST and SGST**, each at half the rate, always equal.
 - **Other state**: **IGST** at the full rate.
 - Rounding: 2 decimals, half-up, per line and per tax. Rounding the bill to the rupee is optional and posted to a
-  separate Round Off ledger. 🆕 Next version: tax rounded once per GST rate per bill, as the portal does.
+  separate Round Off ledger. 🆕 1.1.0: tax rounded once per GST rate per bill, as the portal does.
 - 🆕 **Purchase bills**: IGST or CGST + SGST decided by the supplier's state (from the GSTIN when the ledger has no
   state).
 - Place of supply is the party's state unless you choose another on the bill. A taxed bill without company state or
@@ -37,16 +37,16 @@ Change the registration in **Company Details**. The GSTIN and state of the compa
 - Each posted bill stores the HSN, unit and tax of each line as on the bill date, so later changes to the item never
   change a filed return.
 - **Exports and SEZ**: with or without IGST (LUT / bond), port code and shipping bill; SEZ always IGST; deemed exports;
-  e-commerce operator sales tagged with the operator GSTIN. **Pro**
+  e-commerce operator sales tagged with the operator GSTIN.
 
 ## GST returns (Alt+G)
 
 | Return | On screen | Files |
 |---|---|---|
-| **GSTR-1** | B2B, B2CL, B2CS, credit / debit notes (CDNR, CDNUR), exports, SEZ, e-commerce, nil / exempt / non-GST, HSN summary, documents issued (including cancelled numbers) | **Portal JSON** and CSV **Pro** |
-| **GSTR-3B** | 3.1(a)–(e), 3.2, 4 (ITC, reverse-charge ITC separately), 5, tax payable per head before set-off | **Portal JSON** and CSV **Pro** |
+| **GSTR-1** | B2B, B2CL, B2CS, credit / debit notes (CDNR, CDNUR), exports, SEZ, e-commerce, nil / exempt / non-GST, HSN summary, documents issued (including cancelled numbers) | **Portal JSON** and CSV |
+| **GSTR-3B** | 3.1(a)–(e), 3.2, 4 (ITC, reverse-charge ITC separately), 5, tax payable per head before set-off | **Portal JSON** and CSV |
 
-- GSTR-1 and GSTR-3B are shown on screen on every plan; in 1.0.0 the files need Pro.
+- GSTR-1 and GSTR-3B are shown on screen on every plan; from 1.1.0 the files too (in 1.0.0 they needed Pro).
 - 🆕 **Debit note to a customer** (Debit Note (Sales)): goes to GSTR-1 (CDN, type D) and as an e-invoice debit
   note; no stock movement.
 - 🆕 GSTR-1 **"Check with books"**; documents issued grouped by number series; credit notes on B2C large invoices
@@ -63,18 +63,18 @@ On a purchase bill (F9), **Scan supplier bill (PDF / QR)** reads the supplier's 
 (offline): GSTIN, bill no., date, taxable value, CGST / SGST / IGST, total and the item lines with HSN and GST %.
 The signed e-invoice QR wins over the printed text. You check and save.
 
-## GSTR-2B match **Pro**
+## GSTR-2B match
 
 Download GSTR-2B as JSON from the GST portal (Returns → GSTR-2B → Download) and pick the file in LedgerKing. It is
 matched with your purchase bills by supplier GSTIN and supplier invoice number. You see the tax as per GSTR-2B, the
 tax on your bills, the **credit at risk** (bills your suppliers have not reported) and a "Needs attention" list.
 Nothing in your books is changed. ITC needs the supplier's GSTIN on the purchase bill.
 
-## ITC register **Pro**
+## ITC register
 
 Input tax credit per bill and per month, with reverse-charge ITC kept separately.
 
-## E-invoice **Pro**
+## E-invoice
 
 1. Open the saved invoice (view / print screen) → **E-invoice / E-way bill** → **E-invoice JSON**.
 2. Upload the JSON on the e-invoice portal.
@@ -84,7 +84,7 @@ An invoice with an active IRN cannot be cancelled in LedgerKing (cancel the IRN 
 Export, SEZ and deemed-export invoice types are supported. Direct upload through a GSP is on the
 [roadmap](ROADMAP.md).
 
-## E-way bill **Pro**
+## E-way bill
 
 1. Open the saved invoice → **E-way bill JSON**.
 2. Upload it on the e-way bill portal (e-Waybill → Generate Bulk).
@@ -93,7 +93,7 @@ Export, SEZ and deemed-export invoice types are supported. Direct upload through
 Exports: bill-to is the foreign buyer, ship-to is the port / ICD / airport in India. Guide:
 [iqkings.com/guides/e-way-bill-json-guide](https://www.iqkings.com/guides/e-way-bill-json-guide).
 
-## TDS / TCS **Pro**
+## TDS / TCS
 
 - Sections with dated rates (kept up to date by IQKings), rate by PAN status, nearest-rupee rounding.
 - The TDS / TCS journal is posted for you; challans and month-wise due amounts are tracked.

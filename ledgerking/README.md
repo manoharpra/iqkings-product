@@ -44,7 +44,7 @@
 | **Grow** | Party-wise price lists, fixed asset register with Income-tax depreciation, manufacturing with bill of material |
 | **Move in** | Import from Tally (XML), Excel / CSV (up to 1,00,000 rows a file), Busy and Marg, with a preview before anything is saved; 🆕 Tally checks against your books after the import |
 
-🆕 = coming in the next version. Full list with shortcuts: **[FEATURES.md](FEATURES.md)**.
+🆕 = new in 1.1.0. Full list with shortcuts: **[FEATURES.md](FEATURES.md)**.
 
 ## Why LedgerKing
 
@@ -67,8 +67,8 @@
 
 - **Lifetime**: pay once, use for ever. The first year of **Update & Support** (new versions, official GST rate
   updates, help) is included, then an optional yearly renewal. Versions released while it runs are yours for ever.
-- **Trial length**: 7 days from the next version. LedgerKing 1.0.0 (today's download) gives 30 days, then a Free
-  plan for small shops (1 company, 20 sales bills a month); the next version replaces that Free plan with read-only.
+- **Trial length**: 7 days (from 1.1.0). LedgerKing 1.0.0 gave 30 days, then a Free plan for small shops
+  (1 company, 20 sales bills a month); 1.1.0 replaced that Free plan with read-only.
 - Pay by UPI on the website: the payment screenshot is checked at once and your **product key arrives by e-mail**
   with the invoice. Lost it? Account → Licenses → "Lost your key? Email me a new one".
 

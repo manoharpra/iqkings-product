@@ -3,7 +3,7 @@
 Newest first. Download the latest version from [iqkings.com/ledgerking](https://www.iqkings.com/ledgerking);
 installed copies update themselves (signed updates).
 
-## Next version — in testing
+## 1.1.0 — October 2026
 
 **Bill scan: a purchase bill from the supplier's PDF** (Purchase, F9)
 - **Scan supplier bill (PDF / QR)**, or drop the file on the Purchase form. The file is read on your PC, offline;
@@ -31,7 +31,7 @@ installed copies update themselves (signed updates).
   number prefix; credit notes on B2C large bills reported correctly.
 - Balance Sheet: a party with a balance on the "wrong" side is shown as an advance.
 
-**Plans (new rules)**
+**Plans**
 - **7-day trial** with every feature (existing users count from their first start).
 - After the trial, or when a Monthly / Yearly plan ends, LedgerKing becomes **read-only**: everything you entered
   stays visible, printable, exportable and can be backed up; new entries need a plan. The Free plan is replaced
@@ -66,7 +66,7 @@ Download, pay by UPI and get the product key by e-mail at [iqkings.com/ledgerkin
 
 **Plans**
 - 30-day trial with every feature, then the Free plan for small shops: 1 company and **20 sales bills a month**
-  (changes with the next version, see above).
+  (replaced in 1.1.0, see above).
 - A paid license shows **👑 LedgerKing Pro** in the header; "Upgrade" only during the trial and on the Free plan.
 - Lifetime licenses: official GST rate updates come with an active Update & Support; a small note on GST pages
   says when it has ended.

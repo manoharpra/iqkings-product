@@ -30,7 +30,7 @@ automated tests check. When you close the app, it takes an automatic backup firs
 - **All-or-nothing saving**: a power cut never leaves half an entry. Upgrades take a verified backup first and roll
   back fully on any problem.
 - **Offline license**, signed by IQKings and tied to your computer. When a plan ends, your data stays visible,
-  printable and exportable (read-only from the next version).
+  printable and exportable (read-only, from 1.1.0).
 - 🆕 **Bill scan on your PC**: supplier PDFs and e-invoice QR codes are read inside the app (no upload, no internet),
   under the same strict security rules as the rest of the app.
 - **No payment inside the app**: plans are bought only on [www.iqkings.com](https://www.iqkings.com).

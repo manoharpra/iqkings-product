@@ -29,8 +29,8 @@ on [www.iqkings.com](https://www.iqkings.com).
 
 ## Done (moved from this list)
 
-- Bill scan from the supplier's PDF / e-invoice QR, with item lines and supplier memory — **next version**
-- Tally import checks against your books, debit note to a customer, GSTR-1 "Check with books" — **next version**
+- Bill scan from the supplier's PDF / e-invoice QR, with item lines and supplier memory — **1.1.0**
+- Tally import checks against your books, debit note to a customer, GSTR-1 "Check with books" — **1.1.0**
 - Price lists, fixed asset register, manufacturing, five more languages, Simple Mode, 1,00,000-row imports — **1.0.0**
 
 - GSTR-2B reconciliation with purchase bills — **1.0.0**

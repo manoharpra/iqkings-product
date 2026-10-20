@@ -1,8 +1,7 @@
 # LedgerKing features
 
-Everything below is in **LedgerKing 1.0.0**, except items marked 🆕, which come in the next version. In 1.0.0,
-items marked **Pro** need a paid plan or the trial; the rest also works on the 1.0.0 Free plan. From the next
-version every feature is in the trial and in every plan (see [Plans](#plans)).
+Everything below is in **LedgerKing 1.1.0**; items marked 🆕 are new in 1.1.0. Every feature is in the trial and
+in every plan (see [Plans](#plans)).
 
 ## Accounting
 
@@ -17,9 +16,9 @@ version every feature is in the trial and in every plan (see [Plans](#plans)).
 - Opening balances, period locks (e.g. lock April after filing), year close with verified carry-forward
   (**Alt+Y**).
 - Party credit days, due dates and **credit limit** with a warning on the sales bill.
-- **Recurring vouchers and bills** (rent, salary, EMI, AMC). **Pro**
-- Cost centres, budgets vs actual, foreign-currency bills with forex gain / loss on settlement. **Pro**
-- Interest on overdue bills. **Pro**
+- **Recurring vouchers and bills** (rent, salary, EMI, AMC).
+- Cost centres, budgets vs actual, foreign-currency bills with forex gain / loss on settlement.
+- Interest on overdue bills.
 
 ## Bills, orders and stock
 
@@ -29,15 +28,15 @@ version every feature is in the trial and in every plan (see [Plans](#plans)).
 - Stock items with units (Nos, Kg, Mtr …), HSN / SAC, GST rate history, opening stock and rate.
 - **FIFO** stock value; negative stock blocked or warned (your choice); low-stock list.
 - Stock Journal (manufacture, adjustment) (**Alt+J**), item register, stock summary (**Alt+V**).
-- Sales returns and purchase returns against the original bill. **Pro** (credit / debit notes)
-- Batches, multiple locations (godowns) with transfers, weighted average. **Pro**
+- Sales returns and purchase returns against the original bill.
+- Batches, multiple locations (godowns) with transfers, weighted average.
 - Quotations (**Alt+Q**), sales orders (**Alt+O**) with part delivery, **purchase orders** that become purchase
-  bills. **Pro**
-- Delivery challans that become invoices; proforma print. **Pro**
-- **POS counter billing** and Code 128 barcode labels. **Pro**
+  bills.
+- Delivery challans that become invoices; proforma print.
+- **POS counter billing** and Code 128 barcode labels.
 - Sales / purchase list with tabs, delete or open any voucher from the list.
 - **Price lists**: rate levels such as Wholesale, Retail or Dealer; give a party its list and its sales bills
-  use those rates; fill a list from the selling price with a percentage. **Pro**
+  use those rates; fill a list from the selling price with a percentage.
 
 ## Bill scan 🆕
 
@@ -54,53 +53,53 @@ version every feature is in the trial and in every plan (see [Plans](#plans)).
 ## Fixed assets and manufacturing
 
 - **Fixed asset register**: cost, date put to use, Income-tax WDV or straight-line rate, salvage value, half rate
-  for assets used less than 180 days in the first year, earlier depreciation for old assets. **Pro**
-- Depreciation for the year posted as one journal; year-wise plan; sale or scrap posts the profit or loss. **Pro**
+  for assets used less than 180 days in the first year, earlier depreciation for old assets.
+- Depreciation for the year posted as one journal; year-wise plan; sale or scrap posts the profit or loss.
 - **Manufacturing**: bill of material for a batch, production with a stock check, actual quantity used
-  (wastage), other costs (labour, power) added to the product's stock value; cancel from the voucher list. **Pro**
+  (wastage), other costs (labour, power) added to the product's stock value; cancel from the voucher list.
 
 ## GST
 
 Details in [GST.md](GST.md).
 
 - Regular, Composition and Unregistered businesses; RCM; exempt / nil / non-GST items; dated GST rate slabs.
-- **GSTR-1 and GSTR-3B**: on screen for every plan; **portal JSON** and CSV files. **Pro**
-- **GSTR-2B match**: load the portal JSON and match it with your purchase bills. **Pro**
-- **ITC register**. **Pro**
-- **E-invoice JSON** (NIC schema), IRN and signed QR recorded and printed. **Pro**
-- **E-way bill JSON**, e-way bill number recorded and printed; exports with port / ICD / airport. **Pro**
-- Exports (with / without IGST), SEZ, deemed exports, e-commerce operator sales. **Pro**
+- **GSTR-1 and GSTR-3B**: on screen for every plan; **portal JSON** and CSV files.
+- **GSTR-2B match**: load the portal JSON and match it with your purchase bills.
+- **ITC register**.
+- **E-invoice JSON** (NIC schema), IRN and signed QR recorded and printed.
+- **E-way bill JSON**, e-way bill number recorded and printed; exports with port / ICD / airport.
+- Exports (with / without IGST), SEZ, deemed exports, e-commerce operator sales.
 - 🆕 **Debit note to a customer** (Debit Note (Sales)): in GSTR-1 and as an e-invoice debit note.
 - 🆕 Purchase IGST or CGST + SGST from the supplier's state; tax rounded once per GST rate per bill; GSTR-1
   "Check with books".
 - **TDS / TCS**: sections, PAN rates, challans, month-wise dues, quarterly 26Q / 27EQ worksheet, party
-  statement. **Pro**
+  statement.
 
 ## Reports
 
 - Day Book (**Alt+D**), Ledger (**Alt+R**), Trial Balance (**Alt+T**), Profit & Loss (**Alt+P**), Balance Sheet
   (**Alt+B**).
-- **Outstanding** receivable / payable with ageing 0–30 / 31–60 / 61–90 / 90+ (**Alt+W**). **Pro**
-- Cash Flow, Sales / Purchase register, item register. **Pro**
+- **Outstanding** receivable / payable with ageing 0–30 / 31–60 / 61–90 / 90+ (**Alt+W**).
+- Cash Flow, Sales / Purchase register, item register.
 - **Month-end party statement**: last month in one click, share on WhatsApp or e-mail.
-- Excel export of every printable report. **Pro**
+- Excel export of every printable report.
 - Home screen **"Today's work"**: money to collect and pay, low stock, coming GST dates.
 
 ## Money in and out
 
-- **Payment reminders** on WhatsApp / e-mail, also on a schedule (the list is ready on the chosen day). **Pro**
-- **UPI "Scan to pay" QR** with the bill amount printed on sales bills (UPI ID set in invoice print settings). **Pro**
-- **Bank reconciliation**: bank dates, BRS, auto-match from the bank statement file (CSV / Excel). **Pro**
-- **Cheque printing** with a layout per bank. **Pro**
+- **Payment reminders** on WhatsApp / e-mail, also on a schedule (the list is ready on the chosen day).
+- **UPI "Scan to pay" QR** with the bill amount printed on sales bills (UPI ID set in invoice print settings).
+- **Bank reconciliation**: bank dates, BRS, auto-match from the bank statement file (CSV / Excel).
+- **Cheque printing** with a layout per bank.
 
 ## Printing
 
 - Every voucher and report: **A4, 80 mm and 58 mm thermal** paper; PDF through "Microsoft Print to PDF".
 - **Page setup**: orientation, paper size, margins, fit to width; saved per computer.
-- Invoice print settings: your **logo**, Classic / Compact / Modern layouts, bank details, terms, signatory. **Pro**
+- Invoice print settings: your **logo**, Classic / Compact / Modern layouts, bank details, terms, signatory.
 - Amount in words, signatures, CANCELLED stamp, supplier bill no. / buyer's order no. on the invoice.
 
-## Moving in (imports) **Pro**
+## Moving in (imports)
 
 - **Tally**: masters and Day Book XML (including item vouchers, stock journals, manufacturing journals, delivery
   notes). A summary per kind, a problem list (CSV) and "import the good entries".
@@ -118,9 +117,9 @@ Details in [SECURITY.md](SECURITY.md).
 
 - Verified backups, automatic backup when the app closes, a second copy on a pen drive / other drive, restore with
   an automatic safety copy.
-- **Password-protected backup** files. **Pro**
+- **Password-protected backup** files.
 - **App lock with users and roles** (Admin / Accountant / Viewer), recovery key, auto-lock (**Alt+N**,
-  Ctrl+Shift+L to lock now). **Pro**
+  Ctrl+Shift+L to lock now).
 - Data file never kept in a live OneDrive / Dropbox folder; "Move to this PC" moves it safely.
 
 ## Ease of use
@@ -158,15 +157,15 @@ Details in [SECURITY.md](SECURITY.md).
 
 ## Plans
 
-**From the next version**: a **7-day trial** with every feature, then a paid plan (Monthly, Yearly or Lifetime)
+**LedgerKing 1.1.0**: a **7-day trial** with every feature, then a paid plan (Monthly, Yearly or Lifetime)
 with every feature. Without an active plan (trial over, Monthly / Yearly ended, or a version newer than a Lifetime
 license's Update & Support) LedgerKing is **read-only**: everything you entered stays visible, printable,
 exportable (Excel, GST CSV / JSON) and can be backed up and restored; new entries need a plan. A license may
 limit the number of companies.
 
-**LedgerKing 1.0.0 (today's download)**: 30-day trial with every feature, then a Free plan for small shops.
+**Earlier, in LedgerKing 1.0.0**: a 30-day trial with every feature, then a Free plan for small shops
+(1.1.0 replaced it with read-only):
 
-- **Pro** = any paid plan or the trial: every feature.
 - **Free (1.0.0 only)**: one company, up to **20 sales bills a month**, offline, all accounting vouchers, GST
   bills, Day Book, Ledger, Trial Balance, P&L, Balance Sheet, GSTR-1 and GSTR-3B on screen, printing on all paper
   sizes, backups and restore. It does not add: credit / debit notes, batches, more than one location, challans,
@@ -177,4 +176,4 @@ limit the number of companies.
   registers, price lists, the fixed asset register and manufacturing.
 
 **Nothing is ever locked away**, on any version: what you entered stays visible, printable and can be backed up.
-Buying a plan lifts every limit at once.
+Buying or renewing a plan opens new entries again at once.
